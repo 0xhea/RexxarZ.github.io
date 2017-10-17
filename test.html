@@ -1,201 +1,126 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <link rel="icon" href="ico.png">
+	<link rel="icon" href="ico.png">
 
-    <title>我都傻了</title>
+	<title>我都傻了</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/mycss.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="css/mycss.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">我都傻了</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="http://rexxar.top">主页</a></li>
-            <li><a href="csgo.html">CS:GO</a></li>
-            <li class="active"><a href="#">试题</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">我都傻了</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">主页</a></li>
+					<li><a href="csgo.html">CS:GO</a></li>
+					<li class="active"><a href="#">试题</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
 
-    <div class="container">
+	<div class="container">
+		<div class="starter-template">
 
-      <div class="starter-template">
-        <h1>笔试题</h1><br>
+			<h1>笔试题</h1><br>
 
-      <p class="lead">
-		  <b>邮箱地址匿名化</b><br>
-      </p>
-      
-      
-      <div><span style="font-size: 18px;"><b>相向行走遇到次数</b></span></div><div><span style="font-size: 18px;"><b><span style="font-family: gotham, helvetica, arial, sans-serif;">最长的共有子序列</span></b></span></div><div><span style="font-size: 18px;"><b><span style="font-family: gotham, helvetica, arial, sans-serif;">解压缩</span></b></span></div><div><b><span style="font-size: 18px;"><br></span></b></div><div>[编程|25分] 一道数学题</div><div>时间限制：2秒</div><div>空间限制：131072K</div><div>题目描述</div><div>X游戏的策划小明想到了一个休闲的机关玩法：怪物和玩家所操控的角色都被限定在一段距离为S的直线路径上面且初始时分据两个端点，游戏开始后，无论怪物还是玩家角色都会自动沿着直线路径匀速移动（速度分别为V1和V2，且开始时是相向而行），当他们到达路径的端点后，会马上按原速度折返继续匀速移动。 需要你写一个程序来计算怪物和玩家在某个时间端t内恰好在端点相遇的次数。 如给定路径长度2米，怪物速度1m/s，角色速度2m/s，一共运动2s，整个过程中，怪物和玩家刚好在端点相遇一次。</div><div>输入描述:</div><div>输入包含一行，为四个整数，分别为：路径长度（米）、怪物速度（米/秒）、角色速度（米/秒）、运动的时间（秒）。</div><div>输出描述:</div><div>怪物和玩家角色刚好在端点相遇次数（int）。</div><div>示例1</div><div>输入</div><div>2 1 2 2</div><div>输出</div><div>1</div><div><br></div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//部分通过</div><div><br></div><div>#include &lt;stdio.h&gt;
-</div><div><br></div><div>int main() {
-</div><div>	int f = 0, st, l;
-</div><div>&nbsp;   double v1, v2, t;
-</div><div>	scanf("%d %lf %lf %lf", &amp;l, &amp;v1, &amp;v2, &amp;t);
-</div><div><br></div><div>	double t1 = 0., t2 = 0., s1 = 0., s2 = 0.;
-</div><div>	double tl1 = (double)l / v1;
-</div><div><br></div><div>	for (t1 = tl1;t1 &lt;= t; t1 += tl1) {
-</div><div><br></div><div>		s1 = t1 * v1;
-</div><div>		s2 = t1 * v2;
-</div><div>		st = s1 - s2;
-</div><div><br></div><div>		if (st % l == 0) {
-</div><div>			f++;
-</div><div>		}
-</div><div>	}
-</div><div><br></div><div>	printf("%d", f);
-</div><div>	return 0;
-</div><div>}</div></div><div><br></div><div>[编程|25分] 最长的共有子序列</div><div>时间限制：8秒</div><div>空间限制：262144K</div><div>题目描述</div><div>给出两个字符串，找到他们最长的共有子序列(LCS)（可以不连续），返回该子序列的长度。 例如"ABCD" 和
-"EDCA"，最长的共有子序列是 "A" (或 D或C)，返回1； 例如
-"ABCD" 和 "EACB"，最长的共有子序列是"AC"，返回 2</div><div>输入描述:</div><div>输入包含四行，第一行为第一个字符串的长度，第二行为第二个字符串的长度，第三行为第一个字符串，第四行为第二个字符串。</div><div>输出描述:</div><div>最长的共有子序列长度(int)</div><div>示例1</div><div>输入</div><div>4
-</div><div>4
-</div><div>ABCD
-</div><div>EACB</div><div>输出</div><div>2</div><div><br></div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//m数组越界，需要新的方法</div><div><br></div><div>#include &lt;iostream&gt;
-</div><div>#include &lt;string&gt;
-</div><div><br></div><div>int main()
-</div><div>{
-</div><div>	int a, b, i, j;
-</div><div>	std::cin &gt;&gt; a &gt;&gt; b;
-</div><div>	std::string s1, s2;
-</div><div>	std::cin &gt;&gt; s1 &gt;&gt; s2;
-</div><div><br></div><div>	int m[250000][250000] = { 0 };
-</div><div><br></div><div>	for (i = 1; i &lt; a + 1; i++)
-</div><div>	{
-</div><div>		for (j = 1; j &lt; b + 1; j++)
-</div><div>		{
-</div><div>			if (s1[i - 1] == s2[j - 1])
-</div><div>			{
-</div><div>				m[i][j] = m[i - 1][j - 1] + 1;
-</div><div>			}
-</div><div>			else
-</div><div>			{
-</div><div><br></div><div>				if (m[i][j - 1] &gt;= m[i - 1][j])
-</div><div>				{
-</div><div>					m[i][j] = m[i][j - 1];
-</div><div>				}
-</div><div>				else
-</div><div>				{
-</div><div>					m[i][j] = m[i - 1][j];
-</div><div>				}
-</div><div>			}
-</div><div><br></div><div>		}
-</div><div>	}
-</div><div>	std::cout &lt;&lt; m[a][b];
-</div><div>	return 0;
-</div><div>}
-</div><div><br></div></div><div><br></div><div>[编程|30分] 解压缩</div><div>时间限制：2秒</div><div>空间限制：131072K</div><div>题目描述</div><div>某位程序想出了一个压缩字符串的方法，压缩后的字符串如下：
-3{a}2{bc}，3{a2{c}}，2{abc}3{cd}ef，现在需要你写一个解压的程序，还原原始的字符串。如： s =
-"3{d}2{bc}", return "dddbcbc". s =
-"3{a2{d}}", return "addaddadd". s =
-"2{efg}3{cd}ef", return "efgefgcdcdcdef". 重复次数可以确保是一个正整数。</div><div>输入描述:</div><div>输入包含一行，为压缩后的字符串。</div><div>输出描述:</div><div>输出为解压后的字符串。</div><div>示例1</div><div>输入</div><div>输出</div><div>efgefgcdcdcdef</div><div><br></div><div style="-en-codeblock: true; box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.14902); background-position: initial initial; background-repeat: initial initial;"><div>//不通过，思路有问题</div><div><br></div><div>#include &lt;iostream&gt;
-</div><div>#include &lt;string&gt;
-</div><div>#include &lt;sstream&gt;
-</div><div><br></div><div>int main() {
-</div><div>	std::string a, b, c, d;
-</div><div>	std::cin &gt;&gt; a;
-</div><div>	int n = a.length(), i, j, m, k;
-</div><div>	std::stringstream stream;
-</div><div>	int p[1000] = { 0 }, q[1000] = { 0 }, pi = 0, qi = 0;
-</div><div>	for (i = 0; i &lt; n; i++) {
-</div><div>		if (a[i] == '{') {
-</div><div>			p[pi] = i;
-</div><div>			pi++;
-</div><div>		}
-</div><div>	}
-</div><div>	for (i = 0; i &lt; n; i++) {
-</div><div>		if (a[i] == '}') {
-</div><div>			q[qi] = i;
-</div><div>			qi++;
-</div><div>		}
-</div><div>	}
-</div><div><br></div><div>	for (i = 0; i &lt; pi; i++) {
-</div><div>		c = "";
-</div><div>		m = (int)a[p[pi - i - 1] - 1];
-</div><div>		for (k = p[pi - i - 1]; k &lt; q[i]; k++) {
-</div><div>			stream &lt;&lt; a[k];
-</div><div>			d = stream.str();
-</div><div>			c = c + d;
-</div><div>		}
-</div><div>		for (j = 0; j &lt; m; j++) {
-</div><div>			b = b + c;
-</div><div>		}
-</div><div>	}
-</div><div>	std::cout &lt;&lt; b;
-</div><div>	return 0;
-</div><div>}</div></div>
-      
-      
-      
-      <p>
-			链表、栈、队列、堆<br>
-			树、图<br>
-			B树、B+树<br>
-			哈希表：<a target="_blank" href="http://www.cnblogs.com/dolphin0520/archive/2012/09/28/2700000.html">Hash表</a><br><br>
+			<div>
+				<h3><b>相反数</b></h3>
+				<div>
+					为了得到一个数的"相反数",我们将这个数的数字顺序颠倒,然后再加上原先的数得到"相反数"。例如,为了得到1325的"相反数",首先我们将该数的数字顺序颠倒,我们得到5231,之后再加上原先的数,我们得到5231+1325=6556.如果颠倒之后的数字有前缀零,前缀零将会被忽略。例如n = 100, 颠倒之后是1.
+				</div>
+				<div>
+					<b>输入描述:</b>
+					<pre>输入包括一个整数n,(1 ≤ n ≤ 10^5)</pre>
+					<b>输出描述:</b>
+					<pre>输出一个整数,表示n的相反数</pre>
+				</div>
+				<div>
+					<h4><b>示例1</b></h4>
+					<div>
+						<div><b>输入</b></div>
+						<div>
+							<pre>1325</pre>
+						</div>
+						<div><b>输出</b></div>
+						<div>
+							<pre>6556</pre>
+						</div>
+					</div>
+					</div>
+					<br>
+			</div>
 
-          <b>算法：</b><br>
-			排序算法：<a target="_blank" href="http://blog.csdn.net/hguisu/article/details/7776068/">八大排序算法</a><br>
-			图的最短路径：Dijkstra、Floyd <a target="_blank" href="http://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html">最短路径—Dijkstra算法和Floyd算法</a><br>
-			最小生成树：Prim、Kruskal <a target="_blank" href="http://www.cnblogs.com/biyeymyhjob/archive/2012/07/30/2615542.html">最小生成树-Prim算法和Kruskal算法</a><br>
-			二叉树遍历：前序、中序、后序<br>
-			图的遍历：深度优先、广度优先<br><br>
-          
-          <b>操作系统：</b><br>
-			进程与线程：<a target="_blank" href="http://blog.chinaunix.net/uid-29321342-id-4197320.html">进程与线程的实质区别</a><br>
-			进程间通信：<a target="_blank" href="http://blog.csdn.net/li_ning_/article/details/52128307">Linux下进程间通信的六种机制详解</a><br>
-			进程的状态及转换<br>
-			死锁<br>
-			LRU算法：<a target="_blank" href="http://flychao88.iteye.com/blog/1977653">缓存淘汰算法--LRU算法</a><br>
-			虚拟地址空间：<a target="_blank" href="http://blog.csdn.net/do2jiang/article/details/4690967">进程地址空间与虚拟存储空间的理解</a><br>
-			分段、分页<br><br>
+			<div>
+				<h3><b>相反数</b></h3>
+				<div>
+					小易有一个长度为N的正整数数列A = {A[1], A[2], A[3]..., A[N]}。<br>牛博士给小易出了一个难题:<br>对数列A进行重新排列,使数列A满足所有的A[i] * A[i + 1](1 ≤ i ≤ N - 1)都是4的倍数。<br>小易现在需要判断一个数列是否可以重排之后满足牛博士的要求。
+				</div>
+				<div>
+					<b>输入描述:</b>
+					<pre>输入的第一行为数列的个数t(1 ≤ t ≤ 10),
+接下来每两行描述一个数列A,第一行为数列长度n(1 ≤ n ≤ 10^5)
+第二行为n个正整数A[i](1 ≤ A[i] ≤ 10^9)</pre>
+					<b>输出描述:</b>
+					<pre>对于每个数列输出一行表示是否可以满足牛博士要求,如果可以输出Yes,否则输出No。</pre>
+				</div>
+				<div>
+					<h4><b>示例1</b></h4>
+					<div>
+						<div><b>输入</b></div>
+						<div>
+							<pre>2
+3
+1 10 100
+4
+1 2 3 4</pre>
+						</div>
+						<div><b>输出</b></div>
+						<div>
+							<pre>Yes
+No</pre>
+						</div>
+					</div>
+					</div>
+			</div>
 
-          <b>计算机网络：</b><br>
-			三次握手、四次挥手<br>
-			TCP与UDP<br>
-			七层模型<br><br>
 
-          <b>Linux:</b><br>
-			常用命令<br>
-			进程和线程<br>
-			线程同步：互斥量、条件变量<br><br>
-			
-          <b>数据库：</b><br>
-			sql：正序、倒序、求平均值<br>
-			索引：<a target="_blank" href="http://www.cnblogs.com/gavinsp/p/5513536.html">数据库索引详解</a><br><br>
-			
-          <b>其他不太重要的：</b><br>
-			位运算<br>
-			大端模式和小端模式：<a target="_blank" href="http://blog.csdn.net/ce123_zhouwei/article/details/6971544">详解大端模式和小端模式</a><br>
-			补码、原码、反码<br>
-			Huffman、红黑树
-        </p>
-      </div>
 
-    </div><!-- /.container -->
+
+
+
+
+
+		</div>
+	</div>
+
+</div>
+<!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -205,5 +130,5 @@
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
 
-  </body>
+</body>
 </html>
